@@ -8,11 +8,78 @@ import Inputbox from './InputBox/Inputbox'
 
 import InputSubBtn from './Buttons/Button'
 
+import LoadingScreen from './LoadingScreen/LoadingScreen'
+
+import ChartAndHighlighterbox from './GaugeChart&Highlighter/ChartAndHighlighterbox'
+
 import { aiPlusHuman, chatGpt ,GPT4, human ,bard} from './../Content/InputBox/dummy'
 
 function Content() {
  
   const [value, setValue] =useState('')
+  const [matchTxt, setTextMatch] = useState([])
+  const [disabled, setIsDisabled] = useState(true)
+  const [score, setScore] = useState(0.1)
+  const [isLoading, setIsLoading] = useState(false)
+  const detectAIKeywordsAndPercentage = (text) => {
+    setIsLoading(true)
+    const aiPatterns = [
+      /[\d\w\s]*, an AI created this text[\d\w\s]*/ig,
+      /Generated[\d\w\s]*/ig, 
+      /This text was generated automatically[\d\w\s]*/ig,
+      /Tailord[\d\w\s]*/ig,
+      
+      // Add more patterns here
+    ];
+  
+   
+    let totalTextLength = text.length;
+    let matchedTextLength = 0;
+  
+    const detectedKeywords = [];
+  
+    for (const pattern of aiPatterns) {
+      const matches = text.match(pattern);
+      if (matches) {
+        matches.forEach(match => {
+          detectedKeywords.push(match);
+          matchedTextLength += match.length;
+        });
+      }
+    }
+    // Calculate the matching score as a percentage of matched text length
+    const matchingScore = (matchedTextLength / totalTextLength) * 10;
+    setScore(matchingScore)
+    if(detectedKeywords.length > 0){
+      setTextMatch(detectedKeywords)
+    }else{
+      setTextMatch([''])
+    }
+    setTimeout(() => {setIsLoading(false)},3000)
+  }
+
+  const clear = () => {
+    setValue('')
+    setTextMatch([])
+  }
+
+  const handleSubmit = () => {
+     if (value.length <30) {
+      alert('Not enough content to detect')
+    }
+    else{
+      detectAIKeywordsAndPercentage(value)
+    }
+  }
+
+  useEffect(() => {
+    if(value == ""){
+      setIsDisabled(true)
+    }else{
+      setIsDisabled(false)
+    }
+  },[value])
+
   
   return (
 
@@ -35,32 +102,51 @@ function Content() {
                  <======== Buttons Groups ========>
       ========================================================*/}
     <div className='flex gap-2 flex-wrap pt-10'>
+      {matchTxt.length <1 &&
+      <> 
      <ButtonsGroup onClick={() => setValue(chatGpt)} text="ChatGPT"/>
      <ButtonsGroup onClick={() => setValue(GPT4)} text="GPT4"/>
      <ButtonsGroup onClick={() => setValue(human)} text="Human"/>
      <ButtonsGroup onClick={() => setValue(bard)} text="AI+Human"/>
      <ButtonsGroup onClick={() => setValue(aiPlusHuman)} text="Bard"/>
+    </>}
     </div>
    {/* ======================================================= */}
 
-
    {/*========================================================
-                 <======== Input Fields ========>
+                 <======== Loading Screen ========>
       ========================================================*/}
 
-      <div>
-       <Inputbox/>
-      </div>
+{isLoading ?
+<>
+<LoadingScreen/>
+</>:
+<>
+  {
+      matchTxt.length > 0  ? 
+    <div>
+    <ChartAndHighlighterbox matchTxt={matchTxt} value={value} score={score} clear={clear}/>
+
+    </div>:
+    <>
+      <Inputbox  match={matchTxt} value={value}
+      onChange={(text) => setValue(text)}/>
+      <div className='flex justify-end mt-4 xl:mr-44 '>
+
+         <InputSubBtn disabled={disabled} onSubmit={handleSubmit} />
+
+    </div>
+   </>
+}
+</>
+}
+    
    {/* ======================================================= */}
 
     {/*========================================================
               <======== Input Submite Button ========>
       ========================================================*/}
-   <div className='flex justify-end mt-4 xl:mr-44 '>
-
-         <InputSubBtn/>
-
-    </div>
+   
 
  {/* ======================================================= */}
    </div>
