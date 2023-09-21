@@ -25,7 +25,7 @@ export default {
       'info'     : '#fec926',
       'white'    : '#fefcff;',
       'sliver'   :'#d5d6d3',
-      'grey':'#514f60',
+      'gray':'#514f60',
       'brown':'#342a27'
         
     },
