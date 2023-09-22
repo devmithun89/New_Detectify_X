@@ -18,13 +18,13 @@ Fantasy stories allow readers to escape into a world of imagination and explore 
 
 Fantasy can be found in many forms, including books, movies, television shows, video games, and comic books. Whether they are set in a medieval world or a futuristic one, fantasy stories are often populated with characters who have special abilities and magical powers. They also often involve settings that are filled with mythical creatures, such as dragons and elves, and powerful magical artifacts.
 
-Fantasy stories can take readers on an exciting journey of adventure, mystery, and magic. They can also be used to explore themes of courage, friendship, and love in a way that is both entertaining and thought-provoking. Fantasy can be a great way to explore new worlds and cultures, while also inspiring readers to think differently about the world around them.`
+Fantasy stories can take readers on an exciting journey of adventure, mystery, and magic. They can also be used to explore themes of courage, friendship, and love in a way that is both entertaining and thought-provoking. Fantasy can be a great way to explore new worlds and cultures, while also inspiring readers to think differently about the world around them.`;
 
 export const aiPlusHuman = `Cheese is a rich source of protein and calcium, and is also a good source of other nutrients, such as vitamin D, vitamin A, and phosphorus. It is often used as a topping on sandwiches and pizzas, as well as a flavor enhancer in a variety of dishes, such as pasta and salads.
 
-For a few cheeses, the milk is curdled by adding acids such as vinegar or lemon juice. Most cheeses are acidified to a lesser degree by bacteria, which turn milk sugars into lactic acid, then the addition of rennet completes the curdling. Vegetarian alternatives to rennet are available; most are produced by fermentation of the fungus Mucor miehei, but others have been extracted from various species of the Cynara thistle family. Cheesemakers near a dairy region may benefit from fresher, lower-priced milk, and lower shipping costs.`
+For a few cheeses, the milk is curdled by adding acids such as vinegar or lemon juice. Most cheeses are acidified to a lesser degree by bacteria, which turn milk sugars into lactic acid, then the addition of rennet completes the curdling. Vegetarian alternatives to rennet are available; most are produced by fermentation of the fungus Mucor miehei, but others have been extracted from various species of the Cynara thistle family. Cheesemakers near a dairy region may benefit from fresher, lower-priced milk, and lower shipping costs.`;
 
-export const GPT4 =`Basketball is a team sport played by two teams of five players each. The primary objective is to score points by shooting the basketball through the opponent's hoop, which is mounted on a backboard 10 feet (3.048 meters) above the ground. The team with the most points at the end of the game wins. Basketball is played on a rectangular court, typically indoors, with a surface made of wood or synthetic materials. The rules and regulations are governed by various organizations, such as FIBA (International Basketball Federation) and the NBA (National Basketball Association). The following is a general outline of the basic rules of basketball:
+export const GPT4 = `Basketball is a team sport played by two teams of five players each. The primary objective is to score points by shooting the basketball through the opponent's hoop, which is mounted on a backboard 10 feet (3.048 meters) above the ground. The team with the most points at the end of the game wins. Basketball is played on a rectangular court, typically indoors, with a surface made of wood or synthetic materials. The rules and regulations are governed by various organizations, such as FIBA (International Basketball Federation) and the NBA (National Basketball Association). The following is a general outline of the basic rules of basketball:
 
 1. Game duration: A regulation basketball game is divided into four quarters, each lasting 12 minutes in the NBA and 10 minutes in FIBA play. College basketball in the US has two 20-minute halves. If the game is tied at the end of regulation, overtime periods are played until a winner is determined.
 
@@ -32,9 +32,9 @@ export const GPT4 =`Basketball is a team sport played by two teams of five playe
 
 3. Scoring: Points are scored by shooting the ball through the hoop. A field goal made from inside the three-point arc is worth two points, while a field goal made from outside the arc is worth three points. Free throws, awarded after a foul, are worth one point each.
 
-4. Possession and dribbling: A player in possession of the ball must either pass it to a teammate or dribble (bounce) the ball while moving.`
+4. Possession and dribbling: A player in possession of the ball must either pass it to a teammate or dribble (bounce) the ball while moving.`;
 
-export const bard =`Political stability is the ability of a government to maintain order and authority within its borders. It is essential for economic growth, as it provides a foundation for investment and trade.
+export const bard = `Political stability is the ability of a government to maintain order and authority within its borders. It is essential for economic growth, as it provides a foundation for investment and trade.
 There are many factors that contribute to political stability, including:
 A strong rule of law: The rule of law is the principle that everyone is subject to the same laws, regardless of their social status or political affiliation. A strong rule of law helps to prevent corruption and ensures that everyone has equal opportunity to succeed.
 A well-functioning government: A well-functioning government is one that is able to provide essential services, such as security, education, and healthcare. It is also able to manage the economy effectively and to respond to crises.
@@ -56,9 +56,9 @@ Investing in education and healthcare: Education and healthcare can help to redu
 Promoting good governance: Good governance is essential for building trust between the government and the people. It can be promoted by strengthening the rule of law, fighting corruption, and ensuring transparency and accountability.
 Resolving conflict peacefully: Conflict can be resolved peacefully through negotiation, mediation, and other means. This can help to prevent violence and instability.
 Building resilience: Building resilience is essential for coping with shocks and stresses, such as economic downturns and natural disasters. It can be done by investing in infrastructure, social safety nets, and disaster preparedness.
-Political stability is a complex issue, but it is essential for economic growth and prosperity. By investing in political stability, we can create a better future for ourselves and our children.`
+Political stability is a complex issue, but it is essential for economic growth and prosperity. By investing in political stability, we can create a better future for ourselves and our children.`;
 
-export const human =`O say can you see, by the dawn’s early light,
+export const human = `O say can you see, by the dawn’s early light,
 What so proudly we hail’d at the twilight’s last gleaming,
 Whose broad stripes and bright stars through the perilous fight
 O’er the ramparts we watch’d were so gallantly streaming?
@@ -92,4 +92,4 @@ Praise the power that hath made and preserv’d us a nation!
 Then conquer we must, when our cause it is just,
 And this be our motto - “In God is our trust,”
 And the star-spangled banner in triumph shall wave
-O’er the land of the free and the home of the brave.`
+O’er the land of the free and the home of the brave.`;

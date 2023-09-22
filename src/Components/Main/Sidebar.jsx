@@ -17,12 +17,12 @@ function Sidebar() {
                    <VscTools size={30}/>
                     <h2 className='font-Jost font-medium text-brown text-xl'>Our Tools</h2>
             </div>
-            <div className='w-full border-l-4 border-solid border-primary bg-indigo-100  flex '>
+            <div className='w-full border-l-4 border-solid border-primary bg-indigo-1   00  flex '>
                 <div className='w-[30%] flex justify-center items-center h-20' >
                    <TbListSearch size={30}/>
                 </div>
-                <div className='w-[70%] flex items-center '>
-                    <h2 className='font-Jost font-medium text-brown text-xl'>Ai Content Detector</h2>
+                <div className='w-[70%] flex  items-center '>
+                    <h2 className='font-Jost cursor-pointer font-medium text-brown text-xl'>Ai Content Detector</h2>
                 </div>
             </div>
         </div>
