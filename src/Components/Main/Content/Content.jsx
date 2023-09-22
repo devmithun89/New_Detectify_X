@@ -2,7 +2,7 @@ import {useState, useEffect} from "react";
 
 import ContentHeder from "./ContentHeader/ContentHeder";
 
-import ButtonsGroup from "./../Content/Buttons/ButtonsGroup";
+import ButtonsGroup from "./Buttons/ButtonsGroup";
 
 import Inputbox from "./InputBox/Inputbox";
 
@@ -12,7 +12,9 @@ import LoadingScreen from "./LoadingScreen/LoadingScreen";
 
 import ChartAndHighlighterbox from "./GaugeChart&Highlighter/ChartAndHighlighterbox";
 
-import {aiPlusHuman, chatGpt, GPT4, human, bard} from "./../Content/InputBox/dummy";
+import Ads from "./Ads/Ads";
+
+import {aiPlusHuman, chatGpt, GPT4, human, bard} from "./InputBox/dummy";
 
 function Content() {
   const [value, setValue] = useState("");
@@ -152,10 +154,7 @@ function Content() {
         </div>
 
         <div className="md:w-[20%] w-full h-[100vh] pt-20 md:pt-10 flex">
-          <img
-            src="https://adespresso.com/wp-content/uploads/2020/05/image15-2.png"
-            alt="ads"
-          />
+          <Ads />
         </div>
       </div>
     </>
