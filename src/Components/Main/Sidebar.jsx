@@ -3,7 +3,11 @@ import React from "react";
 import MainLogo from "./../../assets/Images/DetectifyX.png";
 
 import {VscTools} from "react-icons/vsc";
+
 import {TbListSearch} from "react-icons/tb";
+
+import counterLogo from "./../../assets/Images/count.png";
+
 function Sidebar() {
   return (
     <>
@@ -18,7 +22,7 @@ function Sidebar() {
 
           <div className="flex items-center justify-center w-full h-20 gap-2 ">
             <VscTools size={30} />
-            <h2 className="text-xl font-medium font-Jost text-brown">Our Tools</h2>
+            <h2 className="text-2xl font-semibold font-Jost text-brown">Our Tools</h2>
           </div>
 
           {/* =================================================== */}
@@ -41,9 +45,9 @@ function Sidebar() {
             {/* =================================================== */}
             {/* Item-2 */}
 
-            <div className="flex w-full border-r-8 border-white border-solid hover:bg-gray-200 hover:border-primary ">
+            <div className="flex w-full duration-300 border-r-8 border-white border-solid hover:bg-gray-200 hover:border-primary ">
               <div className="w-[30%] flex justify-center items-center h-20">
-                <TbListSearch size={30} />
+                <img className="w-6" src={counterLogo} alt="logo" />
               </div>
               <div className="w-[70%] flex  items-center ">
                 <h2 className="text-xl font-medium cursor-pointer font-Jost text-brown">
